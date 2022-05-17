@@ -263,8 +263,8 @@ int main(int argc,char **argv)
 
     // Freeing the device arrays 
     cudaFree(d_dst);
-	  cudaFree(d_src);
-	  cudaFree(d_cap);
+    cudaFree(d_src);
+    cudaFree(d_cap);
     cudaFree(dreq_trn);
     cudaFree(dreq_src);
     cudaFree(dreq_dst);
