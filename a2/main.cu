@@ -5,24 +5,24 @@
 
  * Modified elements: 
     - compute_stage_1_kernel: Process each element of A + B.T.
-	- compute_stage_2_kernel: Matrix product of (A + B.T) & C.
-	- compute_stage_3_kernel: Process each element of X.
-	- compute: Performs mem. alloc. and calls the kernels.
+    - compute_stage_2_kernel: Matrix product of (A + B.T) & C.
+    - compute_stage_3_kernel: Process each element of X.
+    - compute: Performs mem. alloc. and calls the kernels.
 
  * Procedure adopted: 
-	- All the matrices are processed as a 32 x 32 tile, to get 
-	  better coalescing, and bank conflicts are kept minimised 
-	  in case of shared memory.  
-	- The computation of X is broken down into 3 computations,
-	  (A + B.T) is computed and is stored in temp1 (p,q), then
-	  matrix multiplication of temp1,C is performed, result is
-	  stored in temp2 (p,r). The final kernel computes X using 
-	  both temp2 and D. 
+    - All the matrices are processed as a 32 x 32 tile, to get 
+      better coalescing, and bank conflicts are kept minimised 
+      in case of shared memory.  
+    - The computation of X is broken down into 3 computations,
+      (A + B.T) is computed and is stored in temp1 (p,q), then
+      matrix multiplication of temp1,C is performed, result is
+      stored in temp2 (p,r). The final kernel computes X using 
+      both temp2 and D. 
 
  * References: 
-	The documentation briefly describes on improved coalescing 
-	for computations involving transpose matrices. 
-	https://docs.nvidia.com/cuda/pdf/CUDA_C_Best_Practices_Guide.pdf
+      The documentation briefly describes on improved coalescing 
+      for computations involving transpose matrices. 
+      https://docs.nvidia.com/cuda/pdf/CUDA_C_Best_Practices_Guide.pdf
  **/
 
 #include<iostream>
