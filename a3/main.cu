@@ -86,13 +86,13 @@ __global__ void schedule_kernel(int m, int n, int *executionTime, int *priority,
 
 //Complete the following function
 void operations(int m, int n, int *executionTime, int *priority, int *result){
-	  int *d_executionTime, *d_priority, *d_result; 
+    int *d_executionTime, *d_priority, *d_result; 
 	
-  	// allocate memory...
-  	// Input and output vectors
-  	cudaMalloc(&d_executionTime, n * sizeof(int));
-  	cudaMalloc(&d_priority, n * sizeof(int));
-  	cudaMalloc(&d_result, n * sizeof(int));
+    // allocate memory...
+    // Input and output vectors
+    cudaMalloc(&d_executionTime, n * sizeof(int));
+    cudaMalloc(&d_priority, n * sizeof(int));
+    cudaMalloc(&d_result, n * sizeof(int));
 
     // copy the values...
     cudaMemcpy(d_executionTime, executionTime, n * sizeof(int), cudaMemcpyHostToDevice);
@@ -155,8 +155,7 @@ int main(int argc,char **argv)
 
     //==========================================================================================================
 
-
-	operations ( m, n, executionTime, priority, result ); 
+    operations ( m, n, executionTime, priority, result ); 
 	
     //===========================================================================================================
     
