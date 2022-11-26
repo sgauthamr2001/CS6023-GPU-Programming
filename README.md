@@ -1,6 +1,6 @@
 # CS6023-GPU-Programming
 
-<p align = "justify"> The repository contains assignments done in CUDA as a part of the course GPU Programming, Jan-May 2022. The problem statement of each assignment has been attached in the sub-folders. A brief description about has been presented. For the execution of custom code, the required file is to be placed inside evaluation-script folder inside each of the repositories, before the execution of the Bash script.</p>
+<p align = "justify"> The repository contains assignments done in CUDA as a part of the course GPU Programming, Jan-May 2022. The problem statement of each assignment has been attached in the sub-folders. A brief description about them has been presented. For the execution of custom code, the required file is to be placed inside evaluation-script folder inside each of the repositories, before the execution of the Bash script.</p>
 
 #### Assignment - 1
 > Problem Statement: Involves the computation of $(A + B^{T})(B^{T} - A)$ using parallel computation. 
