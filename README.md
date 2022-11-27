@@ -3,9 +3,10 @@
 <p align = "justify"> The repository contains assignments done in CUDA as a part of the course GPU Programming, Jan-May 2022. The problem statement of each assignment has been attached in the sub-folders. A brief description about them has been presented. Instructions for custom self-checking:</p>
 
 > 1. Add the .cu file to the evaluation-script repository. 
-> 2. Add the custom input as .txt to evaluation-script/testcases/input, refer to problem statement for input format.
-> 3. Add the corresponding output to evaluation-script/testcases/output. 
-> 4. Execute evaluate.sh. 
+> 2. Refer to the problem statement for input/output format. 
+> 3. Add the custom input as .txt to evaluation-script/testcases/input.
+> 4. Add the corresponding output to evaluation-script/testcases/output. 
+> 5. Execute evaluate.sh. 
 
 Note: Testing setup was taken from the [course materials](http://www.cse.iitm.ac.in/~rupesh/teaching/gpu/jan22/).
 
